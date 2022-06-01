@@ -88,6 +88,7 @@
             this.txt_celsuis.Name = "txt_celsuis";
             this.txt_celsuis.Size = new System.Drawing.Size(118, 29);
             this.txt_celsuis.TabIndex = 4;
+            this.txt_celsuis.TextChanged += new System.EventHandler(this.OnTextChangeCelsuis);
             // 
             // txt_kelvin
             // 

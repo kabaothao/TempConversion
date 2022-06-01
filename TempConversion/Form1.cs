@@ -25,6 +25,23 @@ namespace TempConversion
 
         private void btn_celsuis_Click(object sender, EventArgs e)
         {
+            float c = 0;
+            try
+            {
+                c = float.Parse(txt_celsuis.Text);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            float f = c * (9f/ 5f) + 32;
+            float k = c + 273.15f;
+
+            txt_fahrenheit.Text = f.ToString(); //string is going to work wit the text field
+            txt_kelvin.Text = k.ToString();
+
 
         }
 
@@ -61,6 +78,11 @@ namespace TempConversion
         private void onTextChange(object sender, EventArgs e)
         {
             convertFromFahrenheit();
+        }
+
+        private void OnTextChangeCelsuis(object sender, EventArgs e)
+        {
+
         }
     }
 }
